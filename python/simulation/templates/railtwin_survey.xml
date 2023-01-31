@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <survey name="#survey_name"
+            scene="#scene_src"
+            platform="#platform_src"
+            scanner="#scanners_src#riegl_vmx-rail">
+    </survey>
+</document>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <scene id="#scene_name" name="#scene_name">
+        <part>
+            <filter type="objloader">
+                <param type="string" key="matfile" value="#mtl_src" />
+                <param type="string" key="filepath" value="#obj_src" />
+            </filter>
+        </part>
+    </scene>
+</document>

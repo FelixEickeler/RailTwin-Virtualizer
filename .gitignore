@@ -1,0 +1,7 @@
+.idea
+python/modelling/IfcConvert
+python/modelling/IfcConvert.exe
+**/__pycache__/
+docker/tvol
+python/modelling/blender/textures/ground/
+python/modelling/blender/textures/rail-bed/

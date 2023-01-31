@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<document>
+    <!-- ##### BEGIN RIEGL VMX-Rail ##### -->
+    <!-- Maximum number of returns per pulse dependent on pulse frequency;
+    300 kHz: 15; 500 kHz: 15, 1000 kHz: 9, 1250 kHz: 7, 1500 kHz: 5; 4, 1800 kHz;
+    for simulations with high pulse frequencies, we recommend to create a copy of this scanner entry with the respective maxNOR value
+    This are basically  VUX®-1HA2 but different interface.-->
+    <scanner id="riegl_vmx-rail"
+             accuracy_m="0.005"
+             beamDivergence_rad="0.0005"
+             name="RIEGL VMX-Rail"
+             optics="rotating"
+             pulseFreqs_Hz="300000,500000,750000,1000000"
+             pulseLength_ns="4"
+             rangeMin_m="1.2"
+             scanAngleMax_deg="360"
+             scanAngleEffectiveMax_deg="360"
+             wavelength_nm="1064"
+             scanFreqMin_Hz="10"
+             scanFreqMax_Hz="250">
+        <FWFSettings beamSampleQuality="3"/>
+<!--        <beamOrigin x="0" y="0.0" z="0.03">-->
+<!--&lt;!&ndash;            <rot axis="x" angle_deg="90"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <rot axis="z" angle_deg="90"/>&ndash;&gt;-->
+<!--        </beamOrigin>-->
+        <headRotateAxis x="0" y="0" z="1"/>
+    </scanner>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<document>
+	<platform id="vmx-rail-middle" name="RIEGL VMX-RAIL Middle" type="linearpath">
+		<scannerMount x="0.0" y="0.477" z="3.00" rotations="global">
+			<rot axis="y" angle_deg="-90" />
+			<rot axis="x" angle_deg="-90" />
+		</scannerMount>
+		<positionXNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<positionYNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<positionZNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<attitudeXNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+		<attitudeYNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+		<attitudeZNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+	</platform>
+	<platform id="vmx-rail-left" name="RIEGL VMX-RAIL Left" type="linearpath">
+		<!--Von Oben: Linker Scanner: 50 cm links, 45 Grad gegen Uhrzeigersinn-->
+		<scannerMount x="-0.5" y="0.477" z="3.00" rotations="global">
+			<rot axis="y" angle_deg="-90" />
+			<rot axis="x" angle_deg="-70" />
+			<rot axis="z" angle_deg="-45" />
+		</scannerMount>
+		<positionXNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<positionYNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<positionZNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<attitudeXNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+		<attitudeYNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+		<attitudeZNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+	</platform>
+	<platform id="vmx-rail-right" name="RIEGL VMX-RAIL right" type="linearpath">
+		<!--Von Oben: Rechter Scanner: 50 cm rechts, 45 Grad Uhrzeigersinn-->
+		<scannerMount x="0.5" y="0.477" z="3.00" rotations="global">
+			<rot axis="y" angle_deg="-90" />
+			<rot axis="x" angle_deg="-70" />
+			<rot axis="z" angle_deg="45" />
+		</scannerMount>
+		<positionXNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<positionYNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<positionZNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.01"/>
+		<attitudeXNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+		<attitudeYNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+		<attitudeZNoise
+			clipMin="0.0" clipMax="0.0" clipEnabled="false" fixedLifespan="1"
+			type="NORMAL" mean="0.0" stdev="0.001"/>
+	</platform>
+</document>

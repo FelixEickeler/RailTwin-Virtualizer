@@ -1,0 +1,81 @@
+@startuml
+
+start
+note right
+  * --in Path of the <b>expand</b> directory
+end note
+:batches;
+note right
+  Partitions the data in "batches" based on an iterative SVD 2D fit.
+  Always splits in two equals.  Stops if the given projected lenght < batch_size .
+  ====
+  * --batchsize (default: 50m)
+end note
+:enrichment;
+note right
+  Uses the extracted alignment to add addtional informations to the points.
+  The following things will be added:
+     0b0X DTM Height & coordinate hash & above ground
+     0bx0 recording distance & sagital distance & scan angle
+  ====
+  * --enrichment_mode 0bXX (default: 0b11)
+end note
+:splits;
+note right
+  Copies the chunks in a new folder structure:
+        1: data:100
+        2: training:70; test:30
+        3: training:60; test:20; validation: 20
+        4: quartile_N: 4x25
+        5: quintile_N: 5x20
+  ====
+  * --partition int : (default 2)
+ end note
+
+:unify_mapping;
+-> ;
+note right
+replaces class labels with a provided mapping:
+====
+* --sysco_map : path to maping file
+* --sysco_type : target mapping type
+end note
+
+switch (dataformat ?)
+case ( helios2s3dis)
+  : noop     ;
+case (  s3dis )
+  : helios2s3dis ;
+case (  rtib+)
+  note right
+  creates an rtib+ format at specific location
+  Will process the first existing structure:
+    quintile,
+    quartile,
+    [training,...]
+  ====
+  * --out path of the <b>output</b> directory
+end note
+  :  helios2rtib  ;
+endswitch
+
+'
+'while (plantuml plugin installed ?)
+'  ->no;
+''  ->yes;
+'  :install plugin to Pycharm or VSCode;
+''  ->dsc_4;
+'endwhile
+'->yes;
+':Create flow charts;
+
+'if (already tired) then (no)
+'    :generate more;
+'else (no)
+'    :more generation;
+'endif
+
+stop
+@enduml
+
+' More things not in the graph

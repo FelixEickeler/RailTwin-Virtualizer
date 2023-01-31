@@ -1,0 +1,43 @@
+version: "2.3"
+services:
+  helios:
+    build:
+      context: .
+      dockerfile: helios.Dockerfile
+    container_name: helios
+    stdin_open: true
+    shm_size: "32gb"
+    volumes:
+        - ${SRC}:/home/phaethon/data
+        - ${DST}:/home/phaethon/results
+        - ../python/simulation/run_simulation.py:/home/phaethon/scripts/run_simulation.py
+        - ../python/simulation/templates:/home/phaethon/scripts/templates
+    environment:
+        - LOCAL_UID=${UUID}
+        - LOCAL_GID=${GID}
+    ports:
+      - "2242:22"
+    entrypoint: /usr/local/bin/helios-entrypoint.sh
+  blender:
+    build:
+      context: .
+      dockerfile: blender.Dockerfile
+    container_name: blender
+    stdin_open: true
+    shm_size: "32gb"
+    volumes:
+        - ${SRC}:/home/mash/data
+        - ${DST}:/home/mash/results
+        - ../python/modelling/blender:/home/mash/scripts
+    environment:
+        - LOCAL_UID=${UUID}
+        - LOCAL_GID=${GID}
+    ports:
+      - "2245:25"
+    entrypoint: /usr/local/bin/blender-entrypoint.sh
+
+volumes:
+  name:
+    driver: local
+
+

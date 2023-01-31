@@ -1,0 +1,3 @@
+[submodule "python/common/shared"]
+	path = python/common/shared
+	url = https://github.com/FelixEickeler/RailTwin-Common.git

@@ -1,0 +1,6 @@
+# Ignore everything
+**
+
+# Allow files and directories
+!/python/machine_learning/kpconv
+!/docker
